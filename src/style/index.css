@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", sans-serif;
+}
+:root {
+	--primaryColor: #2d3550;
+	--secondaryColor: #5079f0;
+	--panelColor: #4f7af0;
+	--buttonColor: #314a98;
+	--backgroundColor: #f3f1f7;
+	--actionButtonColor: #bdc8d9;
+}
+html,
+body {
+	height: 100%;
+	background-color: var(--backgroundColor);
+}
+
+/* nav bar styling  */
+.nav-container {
+	width: 100%;
+	background-color: var(--primaryColor);
+}
+.nav {
+	min-height: 10vh;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav h1 {
+	font-family: "Raleway", sans-serif;
+	color: #ffff;
+	letter-spacing: 5px;
+}
+.nav button {
+	padding: 10px 25px;
+	border-radius: 10px;
+	color: #ffff;
+	background: var(--buttonColor);
+	box-shadow: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.admin-container {
+	width: 70%;
+	margin: 0 auto;
+	padding: 3rem;
+}
+.courses-panel {
+	margin-top: 5%;
+	padding: 2em;
+	background-color: #ffff;
+}
+.courses-panel button {
+	margin-top: 3%;
+	background: #bdc8d9;
+	border: none;
+	padding: 1em;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.add-newCourse-container input {
+	outline: 0;
+	border-width: 0 0 2px;
+	border-color: var(--primaryColor);
+	padding: 0.6em;
+	margin-right: 20px;
+}
+.add-newCourse-container input:focus {
+	border-color: green;
+}
+/* Course Card 
+    Add Icons instead of Images 
+    course-card
+*/
+.course-card {
+	width: 70%;
+	margin: 12px auto;
+	/* padding: 1em; */
+	padding: 0 1em 0 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #e9e5ea;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.course-card:hover {
+	background-color: #d4d4d4;
+}
+.course-description {
+	width: 50%;
+	/* background-color: #4f7af0; */
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.course-description i {
+	margin: 20px;
+}
+.course-card i {
+	font-size: 1.5em;
+}
+.course-list {
+	margin-top: 40px;
+}
