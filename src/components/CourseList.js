@@ -6,7 +6,9 @@ const CourseList = (props) => {
 	return (
 		<div className="course-list">
 			{courses
-				? courses.map((course) => <CourseCard course={course} />)
+				? courses.map((course, index) => (
+						<CourseCard course={course} key={index} />
+				  ))
 				: "No courses Found"}
 		</div>
 	);

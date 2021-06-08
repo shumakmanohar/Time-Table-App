@@ -1,17 +1,19 @@
 import React from "react";
-import gradCap from "../images/qual.png";
-import deleteImg from "../images/delete.png";
-const CourseCard = (props) => {
-	console.log("You came here", props.course);
+import firebase from "../util/Firebase";
+const CourseCard = ({ course }) => {
+	const deleteCourse = () => {
+		const coursesRef = firebase.database().ref("courses").child(course.id);
+		coursesRef.remove();
+	};
 
 	return (
 		<div className="course-card">
 			<div className="course-description">
 				<i className="fas fa-university"></i>
-				<h3> {props.course.courseName}</h3>
+				<h3> {course.courseName}</h3>
 			</div>
-			<p>{props.course.id}</p>
-			<i className="fas fa-trash-alt"></i>
+			<p>{course.id}</p>
+			<i className="fas fa-trash-alt" onClick={deleteCourse}></i>
 		</div>
 	);
 };

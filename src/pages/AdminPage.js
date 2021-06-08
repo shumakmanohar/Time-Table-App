@@ -17,13 +17,14 @@ const AdminPage = () => {
 			for (let id in course) {
 				console.log(id);
 				//console.log(course[id]);
-				courses.push(course[id]);
+				courses.push({ id, ...course[id] });
 			}
 			setCourses(courses);
 		});
 	}, []);
 
 	const handleChange = (e) => {
+		//handle Change for the Input Value
 		setCourseName(e.target.value);
 	};
 
